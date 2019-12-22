@@ -2,11 +2,12 @@
 ====
 
 ## Webサイトの概要
+以前、いろいろあって[myHomeCalendar](https://github.com/yuzuki-chi/myhomeCalendar)というものを作りました。しかしこちらは私の家族限定（名前とかが固定）なため、汎用性があるカレンダーになるようリメイクしました。
 
-## 作成した理由
+具体的には、データベースの指定だけをユーザが行えば、その先のテーブル作成/ユーザ作成・管理等を自動化またはWebから変更できるようにします。
 
-## システム
-
+## 実装に当たって
+.gitignoreにデータベース接続を行うためのPHPを入れています。こちらは各自でご用意お願いします。例は次のとおり。
 ### dbconnect.php
 ```php:dbconnect.php
 <?php
@@ -30,3 +31,4 @@ try{
 }
 ```
 ## 著者
+[yuzuki-chi](https://github.com/yuzuki-chi)
