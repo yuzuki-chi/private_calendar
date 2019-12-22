@@ -1,0 +1,11 @@
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+table {
+   table-layout: fixed;
+   width: 100%;
+}
+table tr{
+    /*font-family: sans-serif;*/
+}
