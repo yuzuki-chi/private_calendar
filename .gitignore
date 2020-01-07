@@ -1,5 +1,5 @@
 #Macの不要ファイル
 .DS_Store
 
-#DB接続用PHP
-src/dbconnect.php
+#設定用ディレクトリ
+common/
