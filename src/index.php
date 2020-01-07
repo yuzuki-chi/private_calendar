@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('dbconnect.php');
+require_once './common/dbconnect.php';
 
 //初回アクセスの確認処理
 if(!($sql = $pdo->query("SELECT * FROM myHomeCalendar_user"))) {

@@ -1,6 +1,7 @@
 <?php
 // password_verfy()はphp 5.5.0以降の関数のため、バージョンが古くて使えない場合に使用
-require 'password.php';
+require_once './common/password.php';
+require_once './common/dbconnect.php';
 // セッション開始
 session_start();
 
@@ -21,7 +22,6 @@ if (isset($_POST["login"])) {
         $userid = $_POST["userid"];
 
         try {
-            require('dbconnect.php');
             $sql = "SELECT * FROM myHomeCalendar_user WHERE user_id = ?";
             $stmt = $pdo->prepare($sql);
             $stmt->execute(array($userid));

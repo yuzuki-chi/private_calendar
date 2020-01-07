@@ -1,6 +1,7 @@
 <?php
 // password_hash()はphp 5.5.0以降の関数のため、バージョンが古くて使えない場合に使用
-require 'password.php';
+require_once './common/dbconnect.php';
+require_once './common/password.php';
 // セッション開始
 session_start();
 
@@ -26,7 +27,6 @@ if (isset($_POST["signUp"])) {
         $display_name = $_POST["display_name"];
 
         try {
-            require('dbconnect.php');
             $stmt = $pdo->prepare("INSERT INTO myHomeCalendar_user(user_id, password, display_name) VALUES (?, ?, ?)");
             $stmt->execute(array($user_id, password_hash($password, PASSWORD_DEFAULT), $display_name));
             $signUpMessage = "登録が完了しました。<a href='./index.php'>こちらから</a>再度ログインをお願いいたします。";  // ログイン時に使用するIDとパスワード

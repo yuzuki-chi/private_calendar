@@ -13,5 +13,10 @@ if (!isset($_SESSION["login_flag"])) {
     <title>プライベートカレンダー</title>
     <meta http-equiv="content-type" charset="utf-8">
 </head>
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<header class="Header">
+    <div class="Header__title">
+        Private Calendar
+    </div>
+</header>
 <body>
